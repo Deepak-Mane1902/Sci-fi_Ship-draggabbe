@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+#off{
+    position: absolute;
+    left:0;
+    top: -20%;
+
+}
+
+#on{
+    position: absolute;
+    right:-25%;
+    top: -20%;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1)0.9s ;
+    -webkit-transition:all cubic-bezier(0.19, 1, 0.22, 1)0.9s ;
+    -moz-transition:all cubic-bezier(0.19, 1, 0.22, 1)0.9s ;
+    -ms-transition:all cubic-bezier(0.19, 1, 0.22, 1)0.9s ;
+    -o-transition:all cubic-bezier(0.19, 1, 0.22, 1)0.9s ;
+}
+.container{
+    position: relative;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    position: absolute;
+    width: 20vw;
+    height: 8vh;
+    z-index: 5;
+    -webkit-transform: translate(-50%,0%);
+    -moz-transform: translate(-50%,0%);
+    -ms-transform: translate(-50%,0%);
+    -o-transform: translate(-50%,0%);
+}
+
+#dragme,.drag-child{
+    position: absolute;
+    width: 4vw;
+    height: 9vh;
+    border-radius:50%;
+    z-index: 2;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+.drag-child{
+    border: 4px dotted rgb(234, 234, 251) ;
+    animation: circle 1s linear infinite;
+    -webkit-animation: circle 1s linear infinite;
+}
+
+.cir-pr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:4vw;
+    height:8vh;
+}
+#cir{
+    position: absolute;
+    top: 40%;
+    width:1vw;
+    height:2vh;
+    background-color: rgb(255, 106, 0);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@keyframes circle{
+    0%{rotate: -360deg;}
+    100%{rotate:0deg;}
+}
